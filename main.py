@@ -15,7 +15,7 @@ def auto_mejorar(codigo_actual):
     prompt = f"Optimiza el siguiente código para hacerlo más eficiente:\n{codigo_actual}"
     try:
         # Usar la nueva API para chat completions
-        respuesta = openai.chat_completions.create(
+        respuesta = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",  # Usar el modelo adecuado
             messages=[{"role": "user", "content": prompt}],
             max_tokens=500
@@ -33,7 +33,7 @@ def generar_ideas():
     )
     try:
         # Usar la nueva API para generar ideas
-        respuesta = openai.chat_completions.create(
+        respuesta = openai.ChatCompletion.create(
             model="gpt-3.5-turbo",
             messages=[{"role": "user", "content": prompt}],
             max_tokens=150
