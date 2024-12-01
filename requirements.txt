@@ -1,1 +1,1 @@
-openai
+openai>=1.0.0  # Para usar la versión más nueva
